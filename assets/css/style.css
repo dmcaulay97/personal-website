@@ -1,0 +1,378 @@
+/* Color scheme from https://colorhunt.co/palette/252800 */
+:root {
+    --lemon: #ff2e63;
+    --blue: #08d9d6;
+    --dark-blue: #252a34;
+    --grey: #eaeaea;
+}
+
+/* Set 1rem to 10px */
+html{
+    font-size: 62.5%;
+}
+
+/*Set font family, default font size, line height, text color, and background color */
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: var(--dark-blue);
+    background-color: var(--grey);
+}
+
+/*Set heading margin, color, font weight, and line height */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.625rem;
+  color: var(--lemon);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/*Set heading sizes*/
+h1 {
+    /* 4rem = 40px (4 * 10px) */
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 3.5rem;
+  }
+  
+  h3 {
+    font-size: 3rem;
+  }
+  
+  h4 {
+    font-size: 2.5rem;
+  }
+  
+  h5 {
+    font-size: 2rem;
+  }
+  
+  h6 {
+    font-size: 1.5rem;
+  }
+
+
+header{
+    background-color: var(--dark-blue);
+    text-align:center;
+    padding: 1rem 0;
+}
+
+
+/* Header */
+.menu{
+    margin: 0 5rem;
+}
+
+.menu li{
+    display: inline-block;
+    margin: .5rem 1rem; 
+    padding: 0.2rem;
+    width: 10rem;
+    border: 2px solid rgb(0,0,0,0);
+    border-radius: .5rem;
+}
+
+.menu li:hover{
+    background-color: var(--blue);
+    border-color: var(--grey);
+}
+
+.menu a{
+    color: var(--grey);
+    text-decoration: 3px underline var(--lemon);
+    font-size: 2rem;
+}
+
+.menu li:hover a{
+    color: var(--dark-blue);
+}
+
+.banner-img1{
+    background-image: url("../images/mountain.jpg");
+    background-repeat: no-repeat;
+    /*background-size property auto keeps the image the same size for all screen sizes */
+    background-size: auto;
+    background-position: center -47px;
+    background-attachment: fixed;
+    height: 40rem;
+    /* Position set to absolute so subtitle will be positioned relative to .banner-img*/
+    position: relative;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.picture{
+    display: inline-block;
+    height: 20rem;
+    width: 19rem;
+    border: 1rem inset var(--dark-blue);
+    margin: auto auto;
+ }
+
+.picture:hover{
+    border-color: var(--lemon);
+    border-style: outset;
+}
+
+.subtitle{
+    background-color: var(--dark-blue);
+    color: var(--lemon);
+    display: inline-block;
+    /*Following styles position subtitle within banner-img*/
+    padding: 0 .5rem;
+    height: 4rem;
+    width: 30rem;
+    font-size: 3rem;
+    text-align: center;
+    margin: auto auto;
+}
+
+
+/* main */
+.main{
+    justify-content: center;
+}
+
+/* About Me section */
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.content h1{
+    border-bottom: .5rem solid var(--dark-blue);
+    text-align: center;
+    padding:1rem;
+    margin: 0 4rem;
+}
+
+/*This break will become active when screen is larger in order to format About Me title*/
+.about_break{
+    display: none;
+}
+
+.content>p{
+    /* Setting width to 100 alligned columns when flex boxes are side by side*/
+    flex-basis: 100%;
+    padding: 1rem 3rem;
+}
+
+/* Work section */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    padding: 1rem 1rem;
+}
+
+/*Here we set the first app image to be twice the height of the rest.*/
+.row div:first-child{
+    height: 20rem;
+    width: 100%;
+}
+
+.app_container{
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+    height: 10rem;
+}
+
+.app1, .app2, .app3, .app4, .app5{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 2px solid var(--lemon); 
+    background-position: center center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;  
+}
+
+.app1{
+    background-image: url(../images/img1.jpg);
+    background-size: 100%;
+    
+}
+
+.app2{
+    background-image: url(../images/img2.jpg);
+    background-size: 100%;
+}
+
+.app3{
+    background-image: url(../images/img3.jpg);
+    background-size: 110%;
+}
+
+.app4{
+    background-image: url(../images/img4.jpg);
+    background-size: 100%;
+}
+
+.app5{
+    background-image: url(../images/img5.jpg);
+    background-size: 110%;
+}
+
+
+.app_lable{
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    background-color: var(--dark-blue);
+    text-decoration: none;
+    color: var(--lemon);
+    padding: .7rem;
+    width: 7.5rem;
+    margin-left: 0;
+}
+
+.img_overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #44474769;
+}
+
+.app_container:hover .img_overlay{
+    display: none;
+}
+
+
+/* Contact Section */
+.contact_container{
+    flex-basis: 100%;
+    padding: 1rem;
+}
+
+.contact{
+    text-align: center;
+}
+
+.contact li{
+    padding: .6rem;
+    border: 2px solid rgb(0,0,0,0);
+    border-radius: .5rem;
+}
+
+.contact li:hover{
+    background-color: var(--blue);
+    border-color: var(--dark-blue);
+}
+
+.contact a{
+    text-decoration: .3rem underline var(--lemon);
+    color: var(--dark-blue);
+}
+
+.contact li:hover a{
+    color: var(--grey);
+}
+
+
+/* This page was made with mobile first design */
+@media screen and (min-width: 768px){
+    .name{
+        display: inline-block;
+        margin-bottom: 0;
+        padding: 2rem 0;
+        
+    }
+
+    nav{
+        display: inline;
+    }
+
+    .menu{
+        display: inline;
+        margin-left: 9%;
+        margin-right: 0;
+        position: relative;
+        left: 2rem;
+        bottom: .6rem;
+    }
+    
+    .picture{
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+     }
+
+     .subtitle{
+        display: inline-block;
+        /*Following styles position subtitle within banner-img*/
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    .content{
+        flex-direction: row;
+    }
+    .content h1{
+        border-bottom: none;
+        border-right: .5rem solid var(--dark-blue);
+        flex-basis: 26%;
+        text-align: right;
+        margin: 2rem 0;
+    }
+
+    .about_break{
+        display: initial;
+    }
+
+    .content>p{
+        margin: 2rem 0;
+    }
+
+    .row div:first-child{
+        flex-basis: 100%;
+    }
+    
+    .app_container{
+        flex-basis: 50%;
+    }
+
+    .contact{
+        margin: 2rem 0;
+    }
+
+    .contact li{
+        display: inline-block;
+    }
+
+    
+}
+
+@media screen and (min-width: 1024px){
+    .menu{
+        margin-left: 25%;
+    }
+
+    .row div:first-child{
+        height: 25rem;
+    }
+
+    .app_container{
+        height: 15rem;
+    }
+
+    .contact li{
+        margin:0 2%;
+    }
+
+    
+
+    
+}
