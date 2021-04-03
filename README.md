@@ -1,7 +1,7 @@
 # personal-website
 This is a personal site designed to provide a directory to my web applications as well as my contact information. The site itself also acts as a demonstration of my web development skills. The site was clossely modeled off of the example provided in the assignment. I plan to consistently update the site as I aquire new development skills.
 
-![img](assets/images/screen_shot.png)
+![img](assets/images/screen_shot.PNG)
 
 # Features
 
